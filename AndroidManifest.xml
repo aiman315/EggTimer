@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.coursework"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <permission android:name="android.permission.VIBRATE"></permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.coursework.MainActivity"
+            android:label="@string/main_label" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+   
+        <activity
+            android:name="com.example.coursework.AddTimerActivity"
+            android:label="@string/add_timer_label" 
+            android:screenOrientation="portrait"/>
+        
+        <activity 
+            android:name="com.example.coursework.SelectedTimerActivity"
+            android:label="@string/selected_timer_label"
+            android:screenOrientation="portrait"/>
+        <service android:name="TimerService"></service>
+   
+    </application>
+
+</manifest>

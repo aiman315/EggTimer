@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".AddTimerActivity" >
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/timer_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/timer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/timer_duration_seconds"
+        android:layout_below="@+id/TextView1"
+        android:layout_toRightOf="@+id/TextView3"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingTop="10dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timer_name"
+        android:paddingLeft="20dp"
+        android:paddingTop="30dp"
+        android:text="@string/timer_duration"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timer_duration_minutes"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView2"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/timer_minutes" />
+
+    <TextView
+        android:id="@+id/TextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timer_duration_minutes"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/TextView3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/timer_seconds" />
+
+    <TextView
+        android:id="@+id/TextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView5"
+        android:layout_alignBottom="@+id/TextView5"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text=":" />
+
+    <EditText
+        android:id="@+id/timer_duration_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/timer_duration_minutes"
+        android:layout_below="@+id/TextView2"
+        android:layout_toLeftOf="@+id/TextView5"
+        android:layout_toRightOf="@+id/TextView4"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingRight="0dp"
+        android:paddingTop="10dp" />
+
+    <EditText
+        android:id="@+id/timer_duration_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView2"
+        android:layout_toLeftOf="@+id/TextView4"
+        android:layout_toRightOf="@+id/TextView3"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp" />
+
+    <Button
+        android:id="@+id/confirm_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timer_duration_seconds"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:maxHeight="48dp"
+        android:maxWidth="120dp"
+        android:minWidth="120dp"
+        android:onClick="onClickConfirm"
+        android:text="@string/button_confirm_creation_timer" />
+
+    <Button
+        android:id="@+id/cancel_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/confirm_timer"
+        android:layout_alignBottom="@+id/confirm_timer"
+        android:layout_toLeftOf="@+id/TextView4"
+        android:maxHeight="48dp"
+        android:maxWidth="120dp"
+        android:minWidth="120dp"
+        android:onClick="onClickCancel"
+        android:text="@string/button_cancel_creation_timer" />
+
+</RelativeLayout>

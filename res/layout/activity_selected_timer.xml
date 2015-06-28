@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="50dp"
+    android:minWidth="80dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SelectedTimerActivity" >
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="50dp"
+        android:maxWidth="100dp"
+        android:minHeight="50dp"
+        android:minWidth="100dp"
+        android:onClick="pauseTimer"
+        android:text="@string/button_pause_timer" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_pause"
+        android:layout_alignBottom="@+id/button_pause"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/button_pause"
+        android:maxHeight="50dp"
+        android:maxWidth="100dp"
+        android:minHeight="50dp"
+        android:minWidth="100dp"
+        android:onClick="startTimer"
+        android:text="@string/button_start_timer" />
+
+    <Button
+        android:id="@+id/button_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/button_pause"
+        android:maxHeight="50dp"
+        android:maxWidth="100dp"
+        android:minHeight="50dp"
+        android:minWidth="100dp"
+        android:onClick="stopTimer"
+        android:text="@string/button_stop_timer" />
+
+    <TextView
+        android:id="@+id/time_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="@android:dimen/app_icon_size" />
+
+</RelativeLayout>
